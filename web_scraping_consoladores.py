@@ -15,7 +15,7 @@ for x in range(1,11):
     for item in product_list:
         product_links.append(item.a['href'])
 
-# test_link = 'https://www.diversual.com/es/vedo-rosa-101690.html'
+
 product_list_consoladores = []
 for link in product_links:
     r = requests.get(link, headers=headers)
@@ -73,7 +73,7 @@ for link in product_links:
 
 df = pd.DataFrame(product_list_consoladores)
 df.to_csv('diversual_consoladores.csv', index=False)
-# print(df.head(15))
+
 
 
 
